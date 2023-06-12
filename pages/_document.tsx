@@ -1,54 +1,28 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import Script from "next/script";
 
 export default function Document() {
-  return (
-    <Html>
-      <Head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter&display=optional"
-          rel="stylesheet"
-        />
-        <link rel="icon" href="/Icon.jpg" />
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-651DVH2RPJ"
-          strategy="afterInteractive"
-        />
-        <Script
-          id="google-analytics"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', 'G-651DVH2RPJ');
-              `,
-          }}
-        />
-
-        <Script
-          id="zsiqchat"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-                var $zoho=$zoho || {};
-                $zoho.salesiq = $zoho.salesiq || {widgetcode: "c3dcc1fcfee2b66fc9d783aaa40847542159b0f111881b14a9e31924f74c1b42", values:{},ready:function(){}};
-                var d=document;
-                s=d.createElement("script");
-                s.type="text/javascript";s.id="zsiqscript";s.defer=true;
-                s.src="https://salesiq.zoho.com/widget";
-                t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);
-               `,
-          }}
-        />
-      </Head>
-      <body
-        style={{ width: "100vw", position: "absolute", overflowX: "hidden" }}
-      >
-        <Main />
-        <NextScript />
-      </body>
-    </Html>
-  );
+	return (
+		<Html>
+			<Head>
+				<title>Techsity | Where Learning Meets Opportunity</title>
+				<meta
+					name="description"
+					content="Techsity is a technology-focused education and training institution that provides skills development programs for individuals who want to start or advance their tech careers. Our mission is to bridge the skills gap in the tech industry by providing high-quality education and practical experience to our students."
+				/>
+				<meta name="author" content="Techsity" />
+				<meta
+					name="viewport"
+					content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+				/>
+				<meta
+					name="keywords"
+					content="Techsity, Software engineering, web development, software development, Technology, Data, Data science, product management, product design, cloud computing programming, cyber security, Artificial Intelligence, Technology skills, tech training"
+				/>
+			</Head>
+			<body style={{ width: "100vw", position: "absolute", overflowX: "hidden" }}>
+				<Main />
+				<NextScript />
+			</body>
+		</Html>
+	);
 }

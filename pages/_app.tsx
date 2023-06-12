@@ -6,9 +6,9 @@ import "animate.css/animate.min.css";
 import NProgress from "nprogress";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-// import { config } from 'lib/react-query-config';
 import "react-toastify/dist/ReactToastify.css";
-import PreLoader from "@/components/ui/layout/PreLoader";
+import Layout from "../components/layout";
+import PreLoader from "../components/layout/PreLoader";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
 	const [loading, setLoading] = useState(false);
@@ -34,7 +34,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 	}, [router]);
 	return (
 		<Layout>
-			{loading ? <PreLoader /> : null}
+			{loading ? <PreLoader /> : <></>}
 			<Component {...pageProps} />
 		</Layout>
 	);
